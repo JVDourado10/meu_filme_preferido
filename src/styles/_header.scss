@@ -1,0 +1,29 @@
+@use 'variaveis';
+
+.header {
+  background-color: variaveis.$corP1;
+
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+
+    &__item {
+      text-decoration: none;
+      font: variaveis.$titulo-sm;
+      color: #fff;
+      transition: .2s;
+
+      &:hover {
+        color: variaveis.$corS4;
+      }
+    }
+  }
+}
