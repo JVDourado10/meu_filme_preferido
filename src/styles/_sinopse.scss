@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+.sinopse {
+  background-color: variaveis.$corS4;
+
+  &__title {
+    font: variaveis.$titulo-b-md;
+    text-align: center;
+    padding: 80px 0;
+
+    @media(max-width: 768px) {
+      font: variaveis.$titulo-s-md;
+      padding: 20px 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 160px;
+
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    &__image {
+      height: 100%;
+      &__key {
+        border-radius: 125px;
+        max-width: 100%;
+        border: 10px solid variaveis.$corP2;
+      }
+    }
+
+    &__content{
+      background-color: variaveis.$corP3;
+      border-radius: 125px;
+      border: 10px solid variaveis.$corS2;
+      &__text {
+        font-size: variaveis.$texto-b;
+        color: variaveis.$corS1;
+        padding: 60px;
+
+        @media(max-width: 768px) {
+          padding: 44px;
+          font-size: variaveis.$texto-s;
+        }
+
+        &--bold {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

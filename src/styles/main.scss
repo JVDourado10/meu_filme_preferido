@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'header';
 @use 'hero';
+@use 'sinopse';
 
 @font-face {
   font-family: 'SF Hollywood Hills';
@@ -12,6 +13,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
