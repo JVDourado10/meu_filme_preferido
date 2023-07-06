@@ -8,6 +8,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media(max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 20px;
+    }
   }
 
   &__list {
@@ -15,14 +22,26 @@
     display: flex;
     gap: 14px;
 
+    
     &__item {
       text-decoration: none;
-      font: variaveis.$titulo-sm;
+      font: variaveis.$titulo-b-sm;
       color: #fff;
       transition: .2s;
-
+      
+      @media(max-width: 768px) {
+        font: variaveis.$titulo-s-sm;
+        background-color: variaveis.$corS4;
+        border-radius: 4px;
+        padding: 8px; 
+      }
+      
       &:hover {
         color: variaveis.$corS4;
+        
+        @media(max-width: 768px) {
+          color: #fff;
+        }
       }
     }
   }

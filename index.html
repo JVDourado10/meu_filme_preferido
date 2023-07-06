@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mulholland Drive</title>
   <link rel="shortcut icon" href="./dist/images/background.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <h1><a href="./"><img src="./dist/images/logo.svg" alt="Mulholland Drive"></a></h1>
+      <h1><a href="./"><img class="header__logo" src="./dist/images/logo.svg" alt="Mulholland Drive"></a></h1>
       <nav>
         <ul class="header__list">
           <li><a class="header__list__item" href="#sinopse">Sinopse</a></li>
@@ -23,6 +26,14 @@
       </nav>
     </div>
   </header>
+
+  <section class="hero">
+    <div class="hero__container">
+      <img class="hero__container__background" src="./dist/images/background.jpg" alt="Mulholland Drive">
+      <h1 class="hero__container__title">Mulholland Dr</h1>
+      <p class="hero__container__description">Um mergulho no mistério de Hollywood</p>
+    </div>
+  </section>
 </body>
 
 </html>
