@@ -36,6 +36,12 @@
       background-color: variaveis.$corP3;
       border-radius: 125px;
       border: 10px solid variaveis.$corS2;
+      align-items: center;
+      display: grid;
+      max-height: 500px;
+      align-self: center;
+      margin: 0 20px;
+
       &__text {
         font-size: variaveis.$texto-b;
         color: variaveis.$corS1;

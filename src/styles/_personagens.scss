@@ -1,0 +1,106 @@
+@use "variaveis";
+
+.personagens {
+  background-color: variaveis.$corP0;
+
+  &__title {
+    font: variaveis.$titulo-b-md;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  &__content {
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+
+    &__actor {
+      background-color: variaveis.$corP2;
+      height: 250px;
+      border-radius: 125px;
+      display: none;
+      grid-template-columns: 1fr 250px;
+      align-items: center;
+
+      &.show {
+        display: grid;
+      }
+      &.always {
+        display: grid;
+      }
+
+      &__name {
+        font: variaveis.$titulo-b-md;
+        color: #fff;
+        text-align: center;
+      }
+
+      &__text {
+        text-align: center;
+        font: variaveis.$titulo-b-sm;
+        color: variaveis.$corP4;
+        padding: 20px;
+      }
+
+      &__caracter {
+        font: variaveis.$titulo-b-md;
+        color: variaveis.$corS4;
+        text-align: center;
+      }
+
+      &--light {
+        background-color: variaveis.$corP3;
+        height: 250px;
+        border-radius: 125px;
+        display: none;
+        grid-template-columns: 250px 1fr;
+        align-items: center;
+
+        &.show {
+          display: grid;
+        }
+        &.always {
+          display: grid;
+        }
+
+        &__name {
+          font: variaveis.$titulo-b-md;
+          color: variaveis.$corP0;
+          text-align: center;
+        }
+
+        &__text {
+          text-align: center;
+          font: variaveis.$titulo-b-sm;
+          color: variaveis.$corP5;
+          padding: 20px;
+        }
+
+        &__caracter {
+          font: variaveis.$titulo-b-md;
+          color: variaveis.$corS3;
+          text-align: center;
+        }
+      }
+    }
+
+    &__button {
+      background-color: variaveis.$corS3;
+      padding: 20px 30px;
+      border-radius: 125px;
+      justify-self: center;
+      border: none;
+      text-transform: uppercase;
+      font: variaveis.$titulo-b-sm;
+      color: #fff;
+      margin: 60px 0 120px;
+      cursor: pointer;
+
+      &:hover {
+        color: variaveis.$corS1;
+      }
+    }
+  }
+}
