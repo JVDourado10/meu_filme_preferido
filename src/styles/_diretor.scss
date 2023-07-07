@@ -1,0 +1,86 @@
+@use 'variaveis';
+
+.diretor {
+  background-color: variaveis.$corP1;
+  padding-bottom: 80px;
+
+  &__title {
+    font: variaveis.$titulo-b-md;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+
+    @media(max-width: 768px) {
+      font: variaveis.$titulo-s-md;
+    }
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 423px 1fr;
+    gap: 80px;
+    position: relative;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+
+      @media(max-width: 600px) {
+        width: 50%;
+        justify-self: center;
+      }
+
+    }
+
+    @media(max-width: 1200px) {
+      padding: 0 20px;
+      gap: 20px;
+    }
+    @media(max-width: 1000px) {
+      grid-template-columns: 350px 1fr;
+    }
+    @media(max-width: 900px) {
+      grid-template-columns: 270px 1fr;
+      gap: 8px;
+    }
+    @media(max-width: 800px) {
+      grid-template-columns: 180px 1fr;
+      gap: 8px;
+    }
+    @media(max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    
+  }
+  &__content {
+    background-image: url(../images/molde.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    display: grid;
+
+    @media(max-width: 900px) {
+      height: 100%;
+    }
+
+    &__text {
+      position: relative;
+      padding: 80px;
+      font-size: variaveis.$texto-b;
+      align-self: center;
+
+      @media(max-width: 800px) {
+        font-size: variaveis.$texto-s; 
+      }
+      @media(max-width: 600px) {
+        padding: 40px;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.analise {
+  background-color: variaveis.$corP3;
+  padding-bottom: 80px;
+
+  @media(max-width: 768px) {
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+
+    @media(max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    font: variaveis.$titulo-b-md;
+    padding: 80px 0;
+    text-align: center;
+
+    @media(max-width: 768px) {
+      padding: 40px 0;
+      font: variaveis.$titulo-s-md;
+
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    border-radius: 125px;
+    padding: 60px;
+    position: relative;
+
+    &__text {
+      font-size: variaveis.$texto-b;
+
+      @media(max-width: 768px) {
+        font-size: variaveis.$texto-s;
+      }
+    }
+
+    &::before {
+      content: url(../images/detalhes/detalhe2.svg);
+      position: absolute;
+      top: -1px;
+      right: 18%;
+
+      @media(max-width: 650px) {
+        right: 25%;
+      }
+      @media(max-width: 500px) {
+        right: 35%;
+      }
+    }
+  }
+}

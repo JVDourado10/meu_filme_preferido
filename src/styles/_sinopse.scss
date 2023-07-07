@@ -44,6 +44,18 @@
       max-height: 500px;
       align-self: center;
       margin: 0 20px;
+      position: relative;
+
+      &::before {
+        content: url('../images/detalhes/detalhe1.svg');
+        position: absolute;
+        top: -1px;
+        right: 15%;
+
+        @media(max-width: 500px) {
+          right: 30%;
+        }
+      }
 
       &__text {
         font-size: variaveis.$texto-b;
