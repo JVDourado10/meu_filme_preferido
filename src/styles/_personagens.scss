@@ -8,13 +8,21 @@
     color: #fff;
     text-align: center;
     padding: 80px 0;
-  }
 
+    @media (max-width: 768px) {
+      font: variaveis.$titulo-s-md;
+      padding: 40px 0;
+    }
+  }
   &__content {
     max-width: 850px;
     margin: 0 auto;
     display: grid;
     gap: 20px;
+
+    @media (max-width: 768px) {
+      max-width: 400px;
+    }
 
     &__actor {
       background-color: variaveis.$corP2;
@@ -23,6 +31,17 @@
       display: none;
       grid-template-columns: 1fr 250px;
       align-items: center;
+
+      @media(max-width: 768px) {
+        height: 125px;
+        grid-template-columns: 1fr 125px;
+      }
+
+      img {
+        @media(max-width: 768px) {
+          height: 125px;
+        }
+      }
 
       &.show {
         display: grid;
@@ -35,6 +54,10 @@
         font: variaveis.$titulo-b-md;
         color: #fff;
         text-align: center;
+
+        @media (max-width: 768px) {
+          font: variaveis.$titulo-s-md;
+        }
       }
 
       &__text {
@@ -42,65 +65,103 @@
         font: variaveis.$titulo-b-sm;
         color: variaveis.$corP4;
         padding: 20px;
+
+        @media (max-width: 768px) {
+          font: variaveis.$titulo-s-sm;
+          padding: 7px;
+        }
       }
-
-      &__caracter {
-        font: variaveis.$titulo-b-md;
-        color: variaveis.$corS4;
-        text-align: center;
-      }
-
-      &--light {
-        background-color: variaveis.$corP3;
-        height: 250px;
-        border-radius: 125px;
-        display: none;
-        grid-template-columns: 250px 1fr;
-        align-items: center;
-
-        &.show {
-          display: grid;
-        }
-        &.always {
-          display: grid;
-        }
-
-        &__name {
-          font: variaveis.$titulo-b-md;
-          color: variaveis.$corP0;
-          text-align: center;
-        }
-
-        &__text {
-          text-align: center;
-          font: variaveis.$titulo-b-sm;
-          color: variaveis.$corP5;
-          padding: 20px;
-        }
-
         &__caracter {
           font: variaveis.$titulo-b-md;
-          color: variaveis.$corS3;
+          color: variaveis.$corS4;
           text-align: center;
+
+          @media (max-width: 768px) {
+            font: variaveis.$titulo-s-md;
+          }
+        }
+
+        &--light {
+          background-color: variaveis.$corP3;
+          height: 250px;
+          border-radius: 125px;
+          display: none;
+          grid-template-columns: 250px 1fr;
+          align-items: center;
+
+          @media(max-width: 768px) {
+            height: 125px;
+            grid-template-columns: 125px 1fr;
+          }
+
+          img {
+            @media(max-width: 768px) {
+              height: 125px;
+            }
+          }
+
+          &.show {
+            display: grid;
+          }
+          &.always {
+            display: grid;
+          }
+
+          &__name {
+            font: variaveis.$titulo-b-md;
+            color: variaveis.$corP0;
+            text-align: center;
+
+            @media (max-width: 768px) {
+              font: variaveis.$titulo-s-md;
+            }
+          }
+
+          &__text {
+            text-align: center;
+            font: variaveis.$titulo-b-sm;
+            color: variaveis.$corP5;
+            padding: 20px;
+
+            @media (max-width: 768px) {
+              font: variaveis.$titulo-s-sm;
+              padding: 8px;
+            }
+          }
+
+          &__caracter {
+            font: variaveis.$titulo-b-md;
+            color: variaveis.$corS3;
+            text-align: center;
+
+            @media (max-width: 768px) {
+              font: variaveis.$titulo-s-md;
+            }
+          }
         }
       }
-    }
 
-    &__button {
-      background-color: variaveis.$corS3;
-      padding: 20px 30px;
-      border-radius: 125px;
-      justify-self: center;
-      border: none;
-      text-transform: uppercase;
-      font: variaveis.$titulo-b-sm;
-      color: #fff;
-      margin: 60px 0 120px;
-      cursor: pointer;
+      &__button {
+        background-color: variaveis.$corS3;
+        padding: 20px 30px;
+        border-radius: 125px;
+        justify-self: center;
+        border: none;
+        text-transform: uppercase;
+        font: variaveis.$titulo-b-sm;
+        color: #fff;
+        margin: 60px 0 120px;
+        cursor: pointer;
 
-      &:hover {
-        color: variaveis.$corS1;
+        @media(max-width: 768px) {
+          margin: 20px 0 60px;
+          font: variaveis.$titulo-s-sm;
+          padding: 12px 20px;
+        }
+
+        &:hover {
+          color: variaveis.$corS1;
+        }
       }
     }
   }
-}

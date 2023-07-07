@@ -16,10 +16,10 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(25%, 50%) auto;
     padding-bottom: 160px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
       grid-template-columns: 1fr;
     }
 
@@ -29,6 +29,9 @@
         border-radius: 125px;
         max-width: 100%;
         border: 10px solid variaveis.$corP2;
+      }
+      @media(max-width: 1000px) {
+          margin: 0 20px;
       }
     }
 
